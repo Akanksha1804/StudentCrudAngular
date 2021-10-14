@@ -1,0 +1,50 @@
+<h1>Attedance Report</h1>
+<div style="width: 300px;height: 300px;" >
+    <!--<canvas  baseChart
+        [chartType]="'line'"
+        [legend]="true"
+        [datasets]="dataset"
+        [labels]="dates"
+        [options]="chartOptions"
+    >
+    </canvas>-->
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
+<hr>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Attedance List</h6>
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date of Attendance</th>
+                        <th>Name</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date of Attendance</th>
+                        <th>Name</th>
+                        <th>status</th>
+                    </tr>
+                </tfoot>
+
+                <tbody>
+                    <tr *ngFor="let user of attendanceList">
+                        <td>{{user.id}}</td>
+                        <td>{{user.dateOfAttendance}}</td>
+                        <td>{{user.studentName}}</td>
+                        <td>{{user.status}}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+    </div>
+</div>
